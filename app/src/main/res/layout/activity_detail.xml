@@ -1,59 +1,151 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context="com.udacity.sandwichclub.DetailActivity">
+    >
 
-    <ImageView
-        android:id="@+id/image_iv"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="200dp"
-        android:adjustViewBounds="true"
-        android:contentDescription="@string/sandwich_picture_content_description"
-        android:scaleType="centerCrop" />
-
-    <TextView
-        android:id="@+id/origin_tv"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
-
-    <TextView
-        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/detail_also_known_as_label"
-        android:textStyle="bold" />
+        tools:context="com.udacity.sandwichclub.DetailActivity"
+        >
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/detail_ingredients_label"
-        android:textStyle="bold" />
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="@dimen/margin_normal"
+            >
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/detail_place_of_origin_label"
-        android:textStyle="bold" />
+            <ImageView
+                android:id="@+id/sandwich_image"
+                android:layout_width="0dp"
+                android:layout_height="200dp"
+                android:adjustViewBounds="true"
+                android:contentDescription="@string/sandwich_picture_content_description"
+                android:scaleType="centerCrop"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:src="@tools:sample/backgrounds/scenic"
+                />
 
-    <TextView
-        android:id="@+id/description_tv"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/also_know_as_label"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_normal"
+                android:layout_marginLeft="@dimen/margin_normal"
+                android:layout_marginTop="@dimen/margin_normal"
+                android:layout_marginEnd="@dimen/margin_normal"
+                android:layout_marginRight="@dimen/margin_normal"
+                android:gravity="center_horizontal"
+                android:text="@string/detail_also_known_as_label"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                android:textColor="?attr/colorAccent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/sandwich_image"
+                />
 
-    <TextView
-        android:id="@+id/ingredients_tv"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/also_know_as_text"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_small"
+                android:gravity="center_horizontal"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textIsSelectable="true"
+                app:layout_constraintEnd_toEndOf="@+id/also_know_as_label"
+                app:layout_constraintStart_toStartOf="@+id/also_know_as_label"
+                app:layout_constraintTop_toBottomOf="@+id/also_know_as_label"
+                tools:text="Bosna"
+                />
 
-    <TextView
-        android:id="@+id/also_known_tv"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/ingredients_label"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_small"
+                android:gravity="center_horizontal"
+                android:text="@string/detail_ingredients_label"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                android:textColor="?attr/colorAccent"
+                app:layout_constraintEnd_toEndOf="@+id/also_know_as_text"
+                app:layout_constraintStart_toStartOf="@+id/also_know_as_text"
+                app:layout_constraintTop_toBottomOf="@+id/also_know_as_text"
+                />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/detail_description_label"
-        android:textStyle="bold" />
-</FrameLayout>
+            <TextView
+                android:id="@+id/ingredients_text"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_small"
+                android:gravity="center_horizontal"
+                android:lineSpacingMultiplier="1.2"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textIsSelectable="true"
+                app:layout_constraintEnd_toEndOf="@+id/also_know_as_label"
+                app:layout_constraintStart_toStartOf="@+id/also_know_as_label"
+                app:layout_constraintTop_toBottomOf="@+id/ingredients_label"
+                tools:text="• Whitebread\n• Bratwurst\n• Onions\n• Tomato ketchup\n• Mustard\n• Curry powder"
+                />
+
+            <TextView
+                android:id="@+id/origin_label"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_small"
+                android:gravity="center_horizontal"
+                android:text="@string/detail_place_of_origin_label"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                android:textColor="?attr/colorAccent"
+                app:layout_constraintEnd_toEndOf="@+id/also_know_as_label"
+                app:layout_constraintStart_toStartOf="@+id/also_know_as_label"
+                app:layout_constraintTop_toBottomOf="@+id/ingredients_text"
+
+                />
+
+            <TextView
+                android:id="@+id/origin_text"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_small"
+                android:gravity="center_horizontal"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textIsSelectable="true"
+                app:layout_constraintEnd_toEndOf="@+id/also_know_as_label"
+                app:layout_constraintStart_toStartOf="@+id/also_know_as_label"
+                app:layout_constraintTop_toBottomOf="@+id/origin_label"
+                tools:text="Austria"
+                />
+
+            <TextView
+                android:id="@+id/description_label"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_small"
+                android:gravity="center_horizontal"
+                android:text="@string/detail_description_label"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                android:textColor="?attr/colorAccent"
+                app:layout_constraintEnd_toEndOf="@+id/also_know_as_label"
+                app:layout_constraintStart_toStartOf="@+id/also_know_as_label"
+                app:layout_constraintTop_toBottomOf="@+id/origin_text"
+                />
+
+            <TextView
+                android:id="@+id/description_text"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_small"
+                android:lineSpacingMultiplier="1.2"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textIsSelectable="true"
+                app:layout_constraintEnd_toEndOf="@+id/also_know_as_label"
+                app:layout_constraintStart_toStartOf="@+id/also_know_as_label"
+                app:layout_constraintTop_toBottomOf="@+id/description_label"
+                tools:text="Bosnais a spicy Austrian fast food dish, said to have originated in either Salzburg or Linz.It is now popular all over western Austria and southernBavaria."
+                />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</layout>

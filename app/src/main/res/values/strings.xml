@@ -128,5 +128,7 @@
         </item>
     </string-array>
 
+    <string name="formatted_dashed_text">- %s\n</string>
+    <string name="formatted_bullet_text">• %s\n</string>
 </resources>
 <!-- Photo credits to Wikimedia Commons -->
