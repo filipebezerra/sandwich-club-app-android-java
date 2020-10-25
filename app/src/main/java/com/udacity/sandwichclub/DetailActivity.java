@@ -75,10 +75,10 @@ public class DetailActivity extends AppCompatActivity {
     private void bindAlsoKnownAs() {
         final List<String> alsoKnownAs = sandwich.getAlsoKnownAs();
         if (alsoKnownAs.isEmpty()) {
-            viewBinding.alsoKnowAsLabel.setVisibility(View.GONE);
-            viewBinding.alsoKnowAsText.setVisibility(View.GONE);
+            viewBinding.alsoKnownAsLabel.setVisibility(View.GONE);
+            viewBinding.alsoKnownAsText.setVisibility(View.GONE);
         } else
-            viewBinding.alsoKnowAsText.setText(
+            viewBinding.alsoKnownAsText.setText(
                     formatListOfText(alsoKnownAs, R.string.formatted_dashed_text));
     }
 
