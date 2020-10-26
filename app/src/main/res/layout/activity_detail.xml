@@ -79,7 +79,6 @@
                 android:layout_height="wrap_content"
                 app:barrierDirection="bottom"
                 app:constraint_referenced_ids="also_known_as_label,also_known_as_text"
-                tools:layout_editor_absoluteY="566dp"
                 />
 
             <TextView
@@ -117,7 +116,6 @@
                 android:layout_height="wrap_content"
                 app:barrierDirection="bottom"
                 app:constraint_referenced_ids="ingredients_label,ingredients_text"
-                tools:layout_editor_absoluteY="566dp"
                 />
 
             <TextView
@@ -155,7 +153,6 @@
                 android:layout_height="wrap_content"
                 app:barrierDirection="bottom"
                 app:constraint_referenced_ids="origin_label,origin_text"
-                tools:layout_editor_absoluteY="566dp"
                 />
 
             <TextView
