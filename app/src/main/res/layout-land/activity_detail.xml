@@ -37,22 +37,35 @@
                 app:layout_constraintGuide_percent=".5"
                 />
 
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/start_guideline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_begin="@dimen/margin_normal"
+                />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/end_guideline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_end="@dimen/margin_normal"
+                />
 
             <TextView
                 android:id="@+id/also_known_as_label"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/margin_normal"
-                android:layout_marginLeft="@dimen/margin_normal"
                 android:layout_marginTop="@dimen/margin_normal"
-                android:layout_marginEnd="@dimen/margin_normal"
-                android:layout_marginRight="@dimen/margin_normal"
+                android:layout_marginEnd="@dimen/margin_small"
+                android:layout_marginRight="@dimen/margin_small"
                 android:gravity="center_horizontal"
                 android:text="@string/detail_also_known_as_label"
                 android:textAppearance="@style/TextAppearance.AppCompat.Body2"
                 android:textColor="?attr/colorAccent"
                 app:layout_constraintEnd_toEndOf="@+id/half_guideline"
-                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/start_guideline"
                 app:layout_constraintTop_toBottomOf="@+id/sandwich_image"
                 />
 
@@ -70,18 +83,28 @@
                 tools:text="Bosna"
                 />
 
+            <androidx.constraintlayout.widget.Barrier
+                android:id="@+id/also_known_as_barrier"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:barrierDirection="bottom"
+                app:constraint_referenced_ids="also_known_as_label,also_known_as_text"
+                />
+
             <TextView
                 android:id="@+id/ingredients_label"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/margin_small"
+                android:layout_marginEnd="@dimen/margin_small"
+                android:layout_marginRight="@dimen/margin_small"
                 android:gravity="center_horizontal"
                 android:text="@string/detail_ingredients_label"
                 android:textAppearance="@style/TextAppearance.AppCompat.Body2"
                 android:textColor="?attr/colorAccent"
-                app:layout_constraintEnd_toEndOf="@+id/also_known_as_text"
-                app:layout_constraintStart_toStartOf="@+id/also_known_as_text"
-                app:layout_constraintTop_toBottomOf="@+id/also_known_as_text"
+                app:layout_constraintEnd_toEndOf="@+id/half_guideline"
+                app:layout_constraintStart_toStartOf="@+id/start_guideline"
+                app:layout_constraintTop_toBottomOf="@+id/also_known_as_barrier"
                 />
 
             <TextView
@@ -93,8 +116,8 @@
                 android:lineSpacingMultiplier="1.2"
                 android:textAppearance="@style/TextAppearance.AppCompat.Body1"
                 android:textIsSelectable="true"
-                app:layout_constraintEnd_toEndOf="@+id/also_known_as_label"
-                app:layout_constraintStart_toStartOf="@+id/also_known_as_label"
+                app:layout_constraintEnd_toEndOf="@+id/ingredients_label"
+                app:layout_constraintStart_toStartOf="@+id/ingredients_label"
                 app:layout_constraintTop_toBottomOf="@+id/ingredients_label"
                 tools:text="• Whitebread\n• Bratwurst\n• Onions\n• Tomato ketchup\n• Mustard\n• Curry powder"
                 />
@@ -103,16 +126,15 @@
                 android:id="@+id/origin_label"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/margin_normal"
-                android:layout_marginLeft="@dimen/margin_normal"
-                android:layout_marginEnd="@dimen/margin_normal"
-                android:layout_marginRight="@dimen/margin_normal"
+                android:layout_marginTop="@dimen/margin_normal"
+                android:layout_marginStart="@dimen/margin_small"
+                android:layout_marginLeft="@dimen/margin_small"
                 android:gravity="center_horizontal"
                 android:text="@string/detail_place_of_origin_label"
                 android:textAppearance="@style/TextAppearance.AppCompat.Body2"
                 android:textColor="?attr/colorAccent"
-                app:layout_constraintBaseline_toBaselineOf="@+id/also_known_as_label"
-                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/sandwich_image"
+                app:layout_constraintEnd_toEndOf="@+id/end_guideline"
                 app:layout_constraintStart_toStartOf="@+id/half_guideline"
                 />
 
@@ -130,18 +152,28 @@
                 tools:text="Austria"
                 />
 
+            <androidx.constraintlayout.widget.Barrier
+                android:id="@+id/origin_barrier"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:barrierDirection="bottom"
+                app:constraint_referenced_ids="origin_label,origin_text"
+                />
+
             <TextView
                 android:id="@+id/description_label"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/margin_small"
+                android:layout_marginStart="@dimen/margin_small"
+                android:layout_marginLeft="@dimen/margin_small"
                 android:gravity="center_horizontal"
                 android:text="@string/detail_description_label"
                 android:textAppearance="@style/TextAppearance.AppCompat.Body2"
                 android:textColor="?attr/colorAccent"
-                app:layout_constraintEnd_toEndOf="@+id/origin_label"
-                app:layout_constraintStart_toStartOf="@+id/origin_label"
-                app:layout_constraintTop_toBottomOf="@+id/origin_text"
+                app:layout_constraintEnd_toEndOf="@+id/end_guideline"
+                app:layout_constraintStart_toStartOf="@+id/half_guideline"
+                app:layout_constraintTop_toBottomOf="@+id/origin_barrier"
                 />
 
             <TextView
