@@ -39,3 +39,21 @@ Through this project, developer will:
 | Detail layout includes a ScrollView so all the details are visible in small screen devices | Detail layout includes a ScrollView so all the details are visible in small screen devices |
 | Sandwich details are shown in a sensible layout. For example, ingredients appear next to the ingredients label | Sandwich details are shown in a sensible layout. For example, ingredients appear next to the ingredients label |
 
+## Showcase
+
+<div>
+    <img src="./art/showcase/phone-portrait-showcase-01.png" heigth="640" width="326">
+    <img src="./art/showcase/phone-portrait-showcase-02.png" heigth="640" width="326">
+</div>
+<div>
+    <img src="./art/showcase/phone-landscape-showcase-01.png" heigth="326" width="640">
+    <img src="./art/showcase/phone-landscape-showcase-02.png" heigth="326" width="640">
+</div>
+
+## Live Running
+
+<a href="https://appetize.io/app/bn3xrgmzwm89cuufwbgjmg7zmc?device=pixel4&scale=75&orientation=portrait&osVersion=10.0&deviceColor=black&autoplay=true" target="_blank"><img src="./art/live/Appetize-Pixel4.png" heigth="320" width="163"></a>
+
+## Review
+
+![Udacity Review](./review/udacity-review-01.png)
